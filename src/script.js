@@ -8,7 +8,7 @@ const cursor = {
 
 window.addEventListener('mousemove', (event) => {
   cursor.x = event.clientX / sizes.width - 0.5,
-  cursor.y = event.clientY / sizes.height - 0.5
+  cursor.y = - (event.clientY / sizes.height - 0.5)
 })
 
 const canvas = document.querySelector('canvas.webgl')
@@ -41,6 +41,9 @@ const tick = () => {
   const elapsedTime = clock.getElapsedTime()
 
   // mesh.rotation.y = elapsedTime
+
+  camera.position.x = cursor.x * 3
+  camera.position.y = cursor.y * 3
 
   renderer.render(scene, camera)
   window.requestAnimationFrame(tick)
