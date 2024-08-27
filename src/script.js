@@ -42,8 +42,9 @@ const tick = () => {
 
   // mesh.rotation.y = elapsedTime
 
-  camera.position.x = cursor.x * 10
-  camera.position.y = cursor.y * 10
+  camera.position.x = Math.sin(cursor.x * Math.PI * 2) * 2
+  camera.position.z = Math.cos(cursor.x * Math.PI * 2) * 2
+  camera.position.y = cursor.y * 5
   camera.lookAt(mesh.position)
 
   renderer.render(scene, camera)
