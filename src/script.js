@@ -42,8 +42,9 @@ const tick = () => {
 
   // mesh.rotation.y = elapsedTime
 
-  camera.position.x = cursor.x * 3
-  camera.position.y = cursor.y * 3
+  camera.position.x = cursor.x * 10
+  camera.position.y = cursor.y * 10
+  camera.lookAt(mesh.position)
 
   renderer.render(scene, camera)
   window.requestAnimationFrame(tick)
