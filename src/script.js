@@ -38,6 +38,7 @@ renderer.setSize(sizes.width, sizes.height)
 
 const clock = new THREE.Clock()
 const tick = () => {
+  
   const elapsedTime = clock.getElapsedTime()
 
   // mesh.rotation.y = elapsedTime
