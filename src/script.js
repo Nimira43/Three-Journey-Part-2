@@ -13,16 +13,9 @@ const mesh = new THREE.Mesh(
 )
 scene.add(mesh)
 
-// const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
-const aspectRatio = sizes.width / sizes.height
-const camera = new THREE.OrthographicCamera(
-  - 1 * aspectRatio,
-  1 * aspectRatio,
-  1,
-  - 1,
-  0.1,
-  100
-)
+const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
+
+// Place Orthographic Camera code here - see below
 
 camera.position.x = 2
 camera.position.y = 2
@@ -46,3 +39,16 @@ const tick = () => {
 }
 
 tick()
+
+//=========================================================
+// Orthographic Camera code
+//=========================================================
+// const aspectRatio = sizes.width / sizes.height
+// const camera = new THREE.OrthographicCamera(
+//   - 1 * aspectRatio,
+//   1 * aspectRatio,
+//   1,
+//   - 1,
+//   0.1,
+//   100
+// )
