@@ -44,7 +44,6 @@ const tick = () => {
   const elapsedTime = clock.getElapsedTime()
 
   controls.update()
-
   renderer.render(scene, camera)
   window.requestAnimationFrame(tick)
 }
