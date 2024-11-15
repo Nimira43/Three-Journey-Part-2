@@ -21,6 +21,11 @@ window.addEventListener('resize', () => {
   camera.aspect = sizes.width / sizes.height
   camera.updateProjectionMatrix()
   renderer.setSize(sizes.width, sizes.height)
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+})
+
+window.addEventListener('dblclick', () => {
+  
 })
 
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
@@ -36,6 +41,7 @@ const renderer = new THREE.WebGLRenderer({
   canvas: canvas
 })
 renderer.setSize(sizes.width, sizes.height)
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
 const clock = new THREE.Clock()
 const tick = () => {
