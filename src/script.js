@@ -25,7 +25,12 @@ window.addEventListener('resize', () => {
 })
 
 window.addEventListener('dblclick', () => {
-  
+  if (!document.fullscreenElement) {
+    canvas.requestFullscreen()
+    
+  } else {
+    console.log('Leave FullScreen')
+  }
 })
 
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
