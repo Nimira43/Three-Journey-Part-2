@@ -7,14 +7,16 @@ const scene = new THREE.Scene()
 // Demo 1
 // const geometry = new THREE.BoxGeometry(3, 1, 4, 3, 7, 5) 
 
-const geometry = new THREE.BoxGeometry(1, 1, 1)
-
 const positionsArray = new Float32Array([
     0, 0, 0,
     0, 1, 0,
     1, 0, 0
 ])
 
+const positionsAttribute = new THREE.BufferAttribute(positionsArray, 3)
+
+const geometry = new THREE.BufferGeometry()
+geometry.setAttribute('position', positionsAttribute)
 
 const material = new THREE.MeshBasicMaterial({ 
     color: 0xff0000,
