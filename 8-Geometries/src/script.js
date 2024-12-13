@@ -4,7 +4,22 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 const canvas = document.querySelector('canvas.webgl')
 const scene = new THREE.Scene()
 
-const geometry = new THREE.BoxGeometry(1, 1, 1, 2, 2, 2)
+// Demo 1
+// const geometry = new THREE.BoxGeometry(3, 1, 4, 3, 7, 5) 
+
+const geometry = new THREE.BoxGeometry(1, 1, 1)
+
+const positionsArray = new Float32Array(9)
+positionsArray[0] = 0
+positionsArray[1] = 0
+positionsArray[2] = 0
+positionsArray[3] = 0
+positionsArray[4] = 1
+positionsArray[5] = 0
+positionsArray[6] = 1
+positionsArray[7] = 0
+positionsArray[8] = 0
+
 const material = new THREE.MeshBasicMaterial({ 
     color: 0xff0000,
     wireframe: true 
