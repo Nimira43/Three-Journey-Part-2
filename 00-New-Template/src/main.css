@@ -10,6 +10,7 @@
 html,
 body {
   overflow: hidden;
+  background-color: blue;
 }
 
 .canvas {
