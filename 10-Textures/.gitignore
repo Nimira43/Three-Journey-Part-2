@@ -73,3 +73,4 @@ yarn.lock
 
 # Mac system files
 .DS_Store
+.vite/

@@ -4,6 +4,7 @@ import './main.css'
 
 const canvas = document.querySelector('.canvas')
 const scene = new THREE.Scene()
+
 const geometry = new THREE.BoxGeometry(1, 1, 1, 2, 2, 2)
 const material = new THREE.MeshBasicMaterial({ color: '#ff4500' })
 const mesh = new THREE.Mesh(geometry, material)
