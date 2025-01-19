@@ -1,6 +1,10 @@
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import './main.css'
+import gsap from 'gsap'
+import GUI from 'lil-gui'
+
+const gui = new GUI()
 
 const canvas = document.querySelector('.canvas')
 const scene = new THREE.Scene()
