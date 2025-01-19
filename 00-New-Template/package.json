@@ -1,0 +1,15 @@
+{
+  "name": "three-js-template",
+  "version": "1.0.0",
+  "description": "Starter template for Three JS projects",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Three",
+    "JavaScript"
+  ],
+  "author": "Nick Rabone",
+  "license": "MIT"
+}
