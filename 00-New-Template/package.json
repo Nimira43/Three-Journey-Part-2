@@ -11,5 +11,9 @@
     "JavaScript"
   ],
   "author": "Nick Rabone",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "gsap": "^3.12.7",
+    "three": "^0.172.0"
+  }
 }
