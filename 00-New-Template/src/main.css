@@ -10,11 +10,9 @@
 html,
 body {
   overflow: hidden;
-  color: white;
-  background-color: blue;
 }
 
-.canvas {
+.webgl {
   position: fixed;
   top: 0;
   left: 0;
