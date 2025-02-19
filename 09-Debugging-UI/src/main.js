@@ -17,9 +17,10 @@ scene.add(mesh)
 gui.add(mesh.position, 'x').min(- 3).max(3).step(0.01).name('X Position')
 gui.add(mesh.position, 'y').min(- 3).max(3).step(0.01).name('Y Position')
 gui.add(mesh.position, 'z').min(- 3).max(3).step(0.01).name('Z Position')
+
 gui.add(mesh, 'visible').name('Add/Remove Mesh')
 gui.add(material, 'wireframe').name('Add/Remove Wireframe')
-
+gui.addColor(material, 'color')
 
 
 
