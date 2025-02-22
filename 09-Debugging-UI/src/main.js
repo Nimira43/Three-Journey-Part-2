@@ -6,7 +6,6 @@ import GUI from 'lil-gui'
 
 const gui = new GUI()
 const debugObject = {}
-
 const canvas = document.querySelector('.canvas')
 const scene = new THREE.Scene()
 
@@ -42,6 +41,21 @@ debugObject.spin = () => {
   })
 }
 gui.add(debugObject, 'spin')
+
+debugObject.subdivision = 2
+gui
+  .add(debugObject, 'subdivision')
+  .min(1)
+  .max(20)
+  .step(1)
+  .onFinishChange(() => {
+    mesh.geometry = new THREE.BoxGeometry(
+      1, 1, 1,
+      debugObject.subdivision,
+      debugObject.subdivision,
+      debugObject.subdivision
+    )
+  })
 
 const sizes = {
   width: window.innerWidth,
