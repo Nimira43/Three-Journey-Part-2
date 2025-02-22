@@ -1,10 +1,10 @@
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 
-const canvas = document.querySelector('.canvas')
+const canvas = document.querySelector('canvas.canvas')
 const scene = new THREE.Scene()
-const geometry = new THREE.BoxGeometry(1, 1, 1, 2, 2, 2)
-const material = new THREE.MeshBasicMaterial({ color: '#ff4500' })
+const geometry = new THREE.BoxGeometry(1, 1, 1)
+const material = new THREE.MeshBasicMaterial({ color: 0xff4500 })
 const mesh = new THREE.Mesh(geometry, material)
 scene.add(mesh)
 
@@ -30,19 +30,21 @@ const camera = new THREE.PerspectiveCamera(
 )
 camera.position.x = 1
 camera.position.y = 1
-camera.position.z = 2
+camera.position.z = 1
 scene.add(camera)
 
 const controls = new OrbitControls(camera, canvas)
 controls.enableDamping = true
 
 const renderer = new THREE.WebGLRenderer({
-  canvas: canvas
+    canvas: canvas
 })
+
 renderer.setSize(sizes.width, sizes.height)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
 const clock = new THREE.Clock()
+
 const tick = () => {
   const elapsedTime = clock.getElapsedTime()
   controls.update()
