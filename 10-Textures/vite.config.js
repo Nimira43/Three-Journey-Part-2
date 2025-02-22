@@ -3,7 +3,7 @@ import restart from 'vite-plugin-restart'
 
 export default defineConfig({
   root: 'src/',
-  publicDir: '../public',
+  publicDir: '../static',
   server: {
     host: true,
     open: !(
@@ -19,7 +19,7 @@ export default defineConfig({
   plugins: [
     restart({
       restart: [
-        '../public/**',
+        '../static/**',
       ]      
     })
   ],
