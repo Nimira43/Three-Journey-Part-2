@@ -4,7 +4,10 @@ import './main.css'
 import gsap from 'gsap'
 import GUI from 'lil-gui'
 
-const gui = new GUI()
+const gui = new GUI({
+  width: 300
+})
+
 const debugObject = {}
 const canvas = document.querySelector('.canvas')
 const scene = new THREE.Scene()
