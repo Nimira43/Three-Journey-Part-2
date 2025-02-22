@@ -27,10 +27,17 @@ gui
   .addColor(debugObject, 'color')
   .onChange(() => {
     material.color.set(debugObject.color)
-    renderer.render(scene, camera)
 })
 
+debugObject.spin = () => {
+  gsap.to(mesh.rotation, {
+    y: mesh.rotation.y + Math.PI * 6,
+    x: mesh.rotation.x + Math.PI * 7,
+    z: mesh.rotation.z + Math.PI * 9
+  })
+}
 
+gui.add(debugObject, 'spin')
 
 const sizes = {
   width: window.innerWidth,
