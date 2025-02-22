@@ -13,7 +13,12 @@ const scene = new THREE.Scene()
 debugObject.color = '#ff4500'
 
 const geometry = new THREE.BoxGeometry(1, 1, 1, 2, 2, 2)
-const material = new THREE.MeshBasicMaterial({ color: debugObject.color })
+
+const material = new THREE.MeshBasicMaterial({
+  color: debugObject.color, 
+  wireframe: true
+})
+
 const mesh = new THREE.Mesh(geometry, material)
 scene.add(mesh)
 
@@ -36,7 +41,6 @@ debugObject.spin = () => {
     z: mesh.rotation.z + Math.PI * 9
   })
 }
-
 gui.add(debugObject, 'spin')
 
 const sizes = {
