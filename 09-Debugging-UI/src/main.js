@@ -49,6 +49,7 @@ gui
   .max(20)
   .step(1)
   .onFinishChange(() => {
+    mesh.geometry.dispose()
     mesh.geometry = new THREE.BoxGeometry(
       1, 1, 1,
       debugObject.subdivision,
