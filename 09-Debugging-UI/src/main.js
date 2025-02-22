@@ -5,7 +5,8 @@ import gsap from 'gsap'
 import GUI from 'lil-gui'
 
 const gui = new GUI({
-  width: 300
+  width: 300,
+  title: 'Cube GUI'
 })
 
 const debugObject = {}
