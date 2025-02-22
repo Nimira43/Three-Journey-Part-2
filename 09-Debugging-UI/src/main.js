@@ -21,13 +21,15 @@ const material = new THREE.MeshBasicMaterial({
 const mesh = new THREE.Mesh(geometry, material)
 scene.add(mesh)
 
-gui.add(mesh.position, 'x').min(- 3).max(3).step(0.01).name('X Position')
-gui.add(mesh.position, 'y').min(- 3).max(3).step(0.01).name('Y Position')
-gui.add(mesh.position, 'z').min(- 3).max(3).step(0.01).name('Z Position')
+const cubeChanges = gui.addFolder('Change Cube Characteristics')
 
-gui.add(mesh, 'visible').name('Add/Remove Mesh')
-gui.add(material, 'wireframe').name('Add/Remove Wireframe')
-gui
+cubeChanges.add(mesh.position, 'x').min(- 3).max(3).step(0.01).name('X Position')
+cubeChanges.add(mesh.position, 'y').min(- 3).max(3).step(0.01).name('Y Position')
+cubeChanges.add(mesh.position, 'z').min(- 3).max(3).step(0.01).name('Z Position')
+cubeChanges.add(mesh, 'visible').name('Add/Remove Mesh')
+cubeChanges.add(material, 'wireframe').name('Add/Remove Wireframe')
+
+cubeChanges
   .addColor(debugObject, 'color')
   .onChange(() => {
     material.color.set(debugObject.color)
@@ -40,10 +42,10 @@ debugObject.spin = () => {
     z: mesh.rotation.z + Math.PI * 9
   })
 }
-gui.add(debugObject, 'spin')
+cubeChanges.add(debugObject, 'spin')
 
 debugObject.subdivision = 2
-gui
+cubeChanges
   .add(debugObject, 'subdivision')
   .min(1)
   .max(20)
