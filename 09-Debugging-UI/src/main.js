@@ -22,7 +22,6 @@ const mesh = new THREE.Mesh(geometry, material)
 scene.add(mesh)
 
 const cubeChanges = gui.addFolder('Change Cube Characteristics')
-cubeChanges.close()
 
 cubeChanges.add(mesh.position, 'x').min(- 3).max(3).step(0.01).name('X Position')
 cubeChanges.add(mesh.position, 'y').min(- 3).max(3).step(0.01).name('Y Position')
