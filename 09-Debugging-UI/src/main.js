@@ -5,12 +5,15 @@ import gsap from 'gsap'
 import GUI from 'lil-gui'
 
 const gui = new GUI()
+const debugObject = {}
 
 const canvas = document.querySelector('.canvas')
 const scene = new THREE.Scene()
 
+debugObject.color = '#ff4500'
+
 const geometry = new THREE.BoxGeometry(1, 1, 1, 2, 2, 2)
-const material = new THREE.MeshBasicMaterial({ color: '#ff4500' })
+const material = new THREE.MeshBasicMaterial({ color: debugObject.color })
 const mesh = new THREE.Mesh(geometry, material)
 scene.add(mesh)
 
@@ -20,7 +23,12 @@ gui.add(mesh.position, 'z').min(- 3).max(3).step(0.01).name('Z Position')
 
 gui.add(mesh, 'visible').name('Add/Remove Mesh')
 gui.add(material, 'wireframe').name('Add/Remove Wireframe')
-gui.addColor(material, 'color')
+gui
+  .addColor(debugObject, 'color')
+  .onChange(() => {
+    material.color.set(debugObject.color)
+    renderer.render(scene, camera)
+})
 
 
 
