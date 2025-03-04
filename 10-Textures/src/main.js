@@ -1,6 +1,12 @@
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 
+const image = new Image()
+image.onload = () => {
+  const texture = new THREE.Texture(image)
+}
+image.src = '/textures/door/color.jpg'
+
 const canvas = document.querySelector('canvas.canvas')
 const scene = new THREE.Scene()
 const geometry = new THREE.BoxGeometry(1, 1, 1)
