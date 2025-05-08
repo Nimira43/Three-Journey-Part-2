@@ -4,6 +4,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 const image = new Image()
 
 const texture = new THREE.Texture(image)
+texture.colorSpace = THREE.SRGBColorSpace
 
 image.onload = () => {
   texture.needsUpdate = true 
