@@ -9,19 +9,19 @@ loadingManager.onProgress = () => console.log('onProgress')
 loadingManager.onError = () => console.log('onError')
 
 const textureLoader = new THREE.TextureLoader(loadingManager)
-const texture = textureLoader.load(
+const colourTexture = textureLoader.load(
   '/textures/door/color.jpg',
 
 
 
 )
-texture.colorSpace = THREE.SRGBColorSpace
+colourTexture.colorSpace = THREE.SRGBColorSpace
 
 const canvas = document.querySelector('canvas.canvas')
 const scene = new THREE.Scene()
 
 const geometry = new THREE.BoxGeometry(1, 1, 1)
-const material = new THREE.MeshBasicMaterial({ map: texture })
+const material = new THREE.MeshBasicMaterial({ map: colourTexture })
 const mesh = new THREE.Mesh(geometry, material)
 scene.add(mesh)
 
