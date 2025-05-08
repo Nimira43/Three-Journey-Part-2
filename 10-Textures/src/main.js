@@ -3,15 +3,10 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 
 const image = new Image()
 
-const texture = new THREE.Texture(image)
+const textureLoader = new THREE.TextureLoader()
+const texture = textureLoader.load('/textures/door/color.jpg')
+
 texture.colorSpace = THREE.SRGBColorSpace
-
-image.onload = () => {
-  texture.needsUpdate = true 
-}
-
-image.src = '/textures/door/color.jpg'
-
 const canvas = document.querySelector('canvas.canvas')
 const scene = new THREE.Scene()
 
