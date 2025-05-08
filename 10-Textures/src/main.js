@@ -9,8 +9,15 @@ loadingManager.onProgress = () => console.log('onProgress')
 loadingManager.onError = () => console.log('onError')
 
 const textureLoader = new THREE.TextureLoader(loadingManager)
-const colourTexture = textureLoader.load(
-  '/textures/door/color.jpg',
+
+const colourTexture = textureLoader.load('/textures/door/color.jpg')
+const alphaTexture = textureLoader.load('/textures/alpha.jpg')
+const heightTexture = textureLoader.load('/texture/height.jpg')
+const normalTexture = textureLoader.load('/texture/normal.jpg')
+const metalnessTexture = textureLoader.load('/texture/metalness.jpg')
+const ambientOcclusionTexture = textureLoader.load('/texture/ambientOcclusion.jpg')
+const roughnessTexture = textureLoader.load('/texture/roughness.jpg')
+  ,
 
 
 
