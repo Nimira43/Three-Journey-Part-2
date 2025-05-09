@@ -7,7 +7,8 @@ const textureLoader = new THREE.TextureLoader(loadingManager)
 
 // const colourTexture = textureLoader.load('/textures/door/color.jpg')
 // const colourTexture = textureLoader.load('/textures/checkerboard-1024x1024.png')
-const colourTexture = textureLoader.load('/textures/checkerboard-8x8.png')
+// const colourTexture = textureLoader.load('/textures/checkerboard-8x8.png')
+const colourTexture = textureLoader.load('/textures/minecraft.png')
 // const alphaTexture = textureLoader.load('/textures/alpha.jpg')
 // const heightTexture = textureLoader.load('/texture/height.jpg')
 // const normalTexture = textureLoader.load('/texture/normal.jpg')
@@ -27,7 +28,8 @@ colourTexture.colorSpace = THREE.SRGBColorSpace
 // colourTexture.center.x = 0.5
 // colourTexture.center.y = 0.5
 
-colourTexture.minFilter = THREE.NearestFilter
+// colourTexture.minFilter = THREE.NearestFilter
+colourTexture.magFilter = THREE.NearestFilter
 
 const canvas = document.querySelector('canvas.canvas')
 const scene = new THREE.Scene()
