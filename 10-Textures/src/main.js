@@ -5,7 +5,8 @@ const loadingManager = new THREE.LoadingManager()
 
 const textureLoader = new THREE.TextureLoader(loadingManager)
 
-const colourTexture = textureLoader.load('/textures/door/color.jpg')
+// const colourTexture = textureLoader.load('/textures/door/color.jpg')
+const colourTexture = textureLoader.load('/textures/checkerboard-1024x1024.png')
 // const alphaTexture = textureLoader.load('/textures/alpha.jpg')
 // const heightTexture = textureLoader.load('/texture/height.jpg')
 // const normalTexture = textureLoader.load('/texture/normal.jpg')
