@@ -21,7 +21,7 @@ colourTexture.wrapS = THREE.MirroredRepeatWrapping
 colourTexture.wrapT = THREE.MirroredRepeatWrapping
 colourTexture.offset.x = 0.5
 colourTexture.offset.y = 0.5
-colourTexture.rotation = 1
+colourTexture.rotation = Math.PI / 4
 
 const canvas = document.querySelector('canvas.canvas')
 const scene = new THREE.Scene()
