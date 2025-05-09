@@ -9,12 +9,6 @@ const textureLoader = new THREE.TextureLoader(loadingManager)
 // const colourTexture = textureLoader.load('/textures/checkerboard-1024x1024.png')
 // const colourTexture = textureLoader.load('/textures/checkerboard-8x8.png')
 const colourTexture = textureLoader.load('/textures/minecraft.png')
-// const alphaTexture = textureLoader.load('/textures/alpha.jpg')
-// const heightTexture = textureLoader.load('/texture/height.jpg')
-// const normalTexture = textureLoader.load('/texture/normal.jpg')
-// const metalnessTexture = textureLoader.load('/texture/metalness.jpg')
-// const ambientOcclusionTexture = textureLoader.load('/texture/ambientOcclusion.jpg')
-// const roughnessTexture = textureLoader.load('/texture/roughness.jpg')
   
 colourTexture.colorSpace = THREE.SRGBColorSpace
 
@@ -76,10 +70,7 @@ const renderer = new THREE.WebGLRenderer({
 renderer.setSize(sizes.width, sizes.height)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
-const clock = new THREE.Clock()
-
 const tick = () => {
-  const elapsedTime = clock.getElapsedTime()
   controls.update()
   renderer.render(scene, camera)
   window.requestAnimationFrame(tick)
