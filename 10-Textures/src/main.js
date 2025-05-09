@@ -17,6 +17,8 @@ colourTexture.colorSpace = THREE.SRGBColorSpace
 
 colourTexture.repeat.x = 2
 colourTexture.repeat.y = 2
+colourTexture.wrapS = THREE.RepeatWrapping
+colourTexture.wrapT = THREE.RepeatWrapping
 
 
 const canvas = document.querySelector('canvas.canvas')
