@@ -28,7 +28,8 @@ colourTexture.colorSpace = THREE.SRGBColorSpace
 // colourTexture.center.x = 0.5
 // colourTexture.center.y = 0.5
 
-// colourTexture.minFilter = THREE.NearestFilter
+colourTexture.generateMipmaps = false
+colourTexture.minFilter = THREE.NearestFilter
 colourTexture.magFilter = THREE.NearestFilter
 
 const canvas = document.querySelector('canvas.canvas')
