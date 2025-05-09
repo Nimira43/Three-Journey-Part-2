@@ -21,9 +21,11 @@ colourTexture.colorSpace = THREE.SRGBColorSpace
 // colourTexture.wrapT = THREE.MirroredRepeatWrapping
 // colourTexture.offset.x = 0.5
 // colourTexture.offset.y = 0.5
-colourTexture.rotation = Math.PI / 4
-colourTexture.center.x = 0.5
-colourTexture.center.y = 0.5
+// colourTexture.rotation = Math.PI / 4
+// colourTexture.center.x = 0.5
+// colourTexture.center.y = 0.5
+
+colourTexture.minFilter = THREE.NearestFilter
 
 const canvas = document.querySelector('canvas.canvas')
 const scene = new THREE.Scene()
