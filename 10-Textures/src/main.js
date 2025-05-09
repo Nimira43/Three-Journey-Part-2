@@ -11,24 +11,34 @@ loadingManager.onError = () => console.log('onError')
 const textureLoader = new THREE.TextureLoader(loadingManager)
 
 const colourTexture = textureLoader.load('/textures/door/color.jpg')
-const alphaTexture = textureLoader.load('/textures/alpha.jpg')
-const heightTexture = textureLoader.load('/texture/height.jpg')
-const normalTexture = textureLoader.load('/texture/normal.jpg')
-const metalnessTexture = textureLoader.load('/texture/metalness.jpg')
-const ambientOcclusionTexture = textureLoader.load('/texture/ambientOcclusion.jpg')
-const roughnessTexture = textureLoader.load('/texture/roughness.jpg')
-  ,
-
-
-
-)
+// const alphaTexture = textureLoader.load('/textures/alpha.jpg')
+// const heightTexture = textureLoader.load('/texture/height.jpg')
+// const normalTexture = textureLoader.load('/texture/normal.jpg')
+// const metalnessTexture = textureLoader.load('/texture/metalness.jpg')
+// const ambientOcclusionTexture = textureLoader.load('/texture/ambientOcclusion.jpg')
+// const roughnessTexture = textureLoader.load('/texture/roughness.jpg')
+  
 colourTexture.colorSpace = THREE.SRGBColorSpace
+// alphaTexture.colorSpace = THREE.SRGBColorSpace
+// heightTexture.colorSpace = THREE.SRGBColorSpace
+// normalTexture.colorSpace = THREE.SRGBColorSpace
+// metalnessTexture.colorSpace = THREE.SRGBColorSpace
+// ambientOcclusionTexture.colorSpace = THREE.SRGBColorSpace
+// roughnessTexture.colorSpace = THREE.SRGBColorSpace
 
 const canvas = document.querySelector('canvas.canvas')
 const scene = new THREE.Scene()
 
 const geometry = new THREE.BoxGeometry(1, 1, 1)
+
 const material = new THREE.MeshBasicMaterial({ map: colourTexture })
+// const material = new THREE.MeshBasicMaterial({ map: alphaTexture })
+// const material = new THREE.MeshBasicMaterial({ map: heightTexture })
+// const material = new THREE.MeshBasicMaterial({ map: normalTexture })
+// const material = new THREE.MeshBasicMaterial({ map: metalnessTexture })
+// const material = new THREE.MeshBasicMaterial({ map: ambientOcclusionTexture })
+// const material = new THREE.MeshBasicMaterial({ map: roughnessTexture })
+
 const mesh = new THREE.Mesh(geometry, material)
 scene.add(mesh)
 
