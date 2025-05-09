@@ -16,9 +16,9 @@ const colourTexture = textureLoader.load('/textures/door/color.jpg')
 colourTexture.colorSpace = THREE.SRGBColorSpace
 
 colourTexture.repeat.x = 2
-colourTexture.repeat.y = 2
-colourTexture.wrapS = THREE.RepeatWrapping
-colourTexture.wrapT = THREE.RepeatWrapping
+colourTexture.repeat.y = 3
+colourTexture.wrapS = THREE.MirroredRepeatWrapping
+colourTexture.wrapT = THREE.MirroredRepeatWrapping
 
 
 const canvas = document.querySelector('canvas.canvas')
