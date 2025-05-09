@@ -15,8 +15,8 @@ const colourTexture = textureLoader.load('/textures/door/color.jpg')
   
 colourTexture.colorSpace = THREE.SRGBColorSpace
 
-colourTexture.repeat.x = 2
-colourTexture.repeat.y = 3
+// colourTexture.repeat.x = 2
+// colourTexture.repeat.y = 3
 colourTexture.wrapS = THREE.MirroredRepeatWrapping
 colourTexture.wrapT = THREE.MirroredRepeatWrapping
 colourTexture.offset.x = 0.5
